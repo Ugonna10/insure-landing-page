@@ -14,7 +14,7 @@
     <title>Frontend Mentor | Insure landing page</title>
 </head>
 <body>
-    <header class="page-header">
+    <header class="page-header" id="page-header">
         <nav class="nav">
             <div class="container">
                 <!-- nav logo -->
@@ -23,7 +23,7 @@
                 </div>
 
                 <!-- nav menu -->
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="nav-menu">
                     <li class="nav-menu__item">
                         <a href="#" class="nav-menu__item-link">How we work</a>
                     </li>
@@ -34,14 +34,14 @@
                         <a href="#" class="nav-menu__item-link">Account</a>
                     </li>
 
-                    <a href="#" class="nav-menu__button">View plans</a>
+                    <a href="#" class="nav-menu__link">View plans</a>
                 </ul>
 
                 <!-- hamburger button -->
-                <div class="hamburger-button">
-                    <div class="hamburger-button__line"></div>
-                    <div class="hamburger-button__line"></div>
-                    <div class="hamburger-button__line"></div>
+                <div class="hamburger" id="hamburger">
+                    <svg class="hamburger__open" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="none" fill-rule="evenodd"><path fill="#FFF" stroke="#2C2830" stroke-width="1.5" d="M.75.75h30.5v30.5H.75z"/><g fill="#2C2830"><path d="M8 10h16v1.5H8zM8 15h16v1.5H8zM8 20h16v1.5H8z"/></g></g></svg>
+
+                    <svg class="hamburger__close" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="none" fill-rule="evenodd"><path fill="#FFF" stroke="#2C2830" stroke-width="1.5" d="M.75.75h30.5v30.5H.75z"/><g fill="#2C2830"><path d="M10.873 9.563l11.314 11.314-1.06 1.06L9.813 10.623z"/><path d="M9.813 20.877L21.127 9.563l1.06 1.06-11.314 11.314z"/></g></g></svg>
                 </div>
             </div>
         </nav>
