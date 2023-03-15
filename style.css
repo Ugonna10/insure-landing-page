@@ -30,6 +30,7 @@ h3 {
     font-family: 'DM Serif Display', serif;
     line-height: 1.15;
     letter-spacing: 0.15rem;
+    color: var(--very-dark-violet);
 }
 
 h1 {
@@ -178,7 +179,6 @@ body {
 
 .hero-texts {
     position: relative;
-    color: white;
     text-align: center;
     padding-inline: 2.4rem;
 }
@@ -191,11 +191,13 @@ body {
     padding-top: 10rem;
     position: relative;
     z-index: 10;
+    color: white;
 }
 
 .hero-texts__sub-heading {
     padding-top: 3rem;
     padding-bottom: 3.5rem;
+    color: white;
 }
 
 .hero-texts__link {
@@ -231,9 +233,94 @@ body {
 
 /* Hero end ===== */
 
+/* How-we-work start ===== */
+.how-we-work {
+    padding: 14rem 0;
+}
+
+.how-we-work-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4.4rem;
+}
+
+.how-we-work-header__top-line {
+    background-color: var(--dark-grayish-violet);
+    width: 14.5rem;
+    height: 0.1rem;
+}
+
+.how-we-work-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+    margin: 8.5rem 0 15rem;
+}
+
+.how-we-work-card {
+    text-align: center;
+}
+
+.how-we-work-card__icon {
+    margin-bottom: 4rem;
+}
+
+.how-we-work-card__texts-heading {
+    margin-bottom: 2.2rem;
+    text-transform: capitalize;
+}
+
+.how-we-work-footer {
+    position: relative;
+    height: 34.2rem;
+    background-color: var(--dark-violet);
+    padding-inline: 4.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4.5rem;
+
+    text-align: center;
+}
+
+.how-we-work-footer__pattern-sm-screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.how-we-work-footer__pattern-lg-screen {
+    display: none;
+}
+
+.how-we-work-footer__text {
+    color: white;
+    z-index: 10;
+}
+
+.how-we-work-footer__cta {
+    display: inline-block;
+    padding: 0.5em 2em;
+    color: white;
+    font-weight: 700;
+    border: 2px solid white;
+    text-transform: uppercase;
+}
+
+.how-we-work-footer__cta:active {
+    background-color: white;
+    color: var(--very-dark-violet);
+}
+
+/* How-we-work end ===== */
+
 
 /* ==================== MEDIUM SCREEN ==================== */
 @media (min-width: 720px) {
+
     /* Nav start ===== */
     .nav-menu {
         position: static;
@@ -288,7 +375,7 @@ body {
     /* Nav end ===== */
 
     /* Hero start ===== */
-    .hero{
+    .hero {
         position: relative;
     }
 
@@ -347,6 +434,37 @@ body {
     }
 
     /* Hero end ===== */
+
+    /* How-we-work start ===== */
+    .how-we-work {
+        padding: 15rem 0;
+    }
+
+    .how-we-work-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 2.5rem;
+        align-items: baseline;
+    }
+
+    .how-we-work-card {
+        flex-basis: calc(50% - 2.5rem);
+    }
+
+    .how-we-work-footer__cta{
+        transition: all var(--transition);
+        transition-property: background-color, color;
+    }
+
+    .how-we-work-footer__cta:focus,
+    .how-we-work-footer__cta:hover {
+        background-color: white;
+        color: var(--very-dark-violet);
+    }
+
+    /* How-we-work end ===== */
+
 }
 
 /* ==================== LARGE SCREEN ==================== */
@@ -388,4 +506,53 @@ body {
     }
 
     /* Hero end ===== */
+
+    /* How-we-work start ===== */
+    .how-we-work {
+        padding: 20rem 0 15rem;
+    }
+
+    .how-we-work-header {
+        align-items: start;
+    }
+
+    .how-we-work-cards {
+        flex-wrap: nowrap;
+        column-gap: 5rem;
+        margin: 10rem 0 16rem;
+
+    }
+
+    .how-we-work-card {
+        flex-basis: auto;
+        text-align: start;
+    }
+
+    .how-we-work-footer {
+        height: 25rem;
+        padding-inline: 8rem;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 26.5rem;
+        text-align: start;
+    }
+
+    .how-we-work-footer__pattern-sm-screen {
+        display: none;
+    }
+
+    .how-we-work-footer__pattern-lg-screen {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .how-we-work-footer__cta{
+        width: 38%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    /* How-we-work end ===== */
 }
