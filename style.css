@@ -273,7 +273,7 @@ body {
 
 .how-we-work-footer {
     position: relative;
-    height: 34.2rem;
+    min-height: 34.2rem;
     background-color: var(--dark-violet);
     padding-inline: 4.5rem;
 
@@ -282,8 +282,8 @@ body {
     justify-content: center;
     align-items: center;
     row-gap: 4.5rem;
-
     text-align: center;
+    overflow: hidden;
 }
 
 .how-we-work-footer__pattern-sm-screen {
@@ -321,6 +321,7 @@ body {
 .footer {
     position: relative;
     padding-block: 9rem;
+    overflow-x: hidden;
 }
 
 .footer__pattern-mobile {
