@@ -80,7 +80,7 @@ body {
     top: 0;
     z-index: 10000;
     background-color: var(--very-light-gray);
-    box-shadow: 0px -1rem 1.5rem black;
+    box-shadow: 0rem -1rem 1.5rem black;
 }
 
 /* Nav start ===== */
@@ -101,10 +101,10 @@ body {
 
 .nav-menu {
     position: fixed;
-    top: var(--page-header-height, 78px);
+    top: var(--page-header-height, 7.8rem);
     left: 100%;
     width: 100vw;
-    height: calc(100vh - 78px);
+    height: calc(100vh - 7.8rem);
     background-color: var(--very-dark-violet);
     transition: left var(--transition);
 }
@@ -306,7 +306,7 @@ body {
     padding: 0.5em 2em;
     color: white;
     font-weight: 700;
-    border: 2px solid white;
+    border: 0.2rem solid white;
     text-transform: uppercase;
 }
 
@@ -316,6 +316,92 @@ body {
 }
 
 /* How-we-work end ===== */
+
+/* footer start ===== */
+.footer {
+    position: relative;
+    padding-block: 9rem;
+}
+
+.footer__pattern-mobile {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
+
+.footer__pattern-desktop {
+    display: none;
+}
+
+.footer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+}
+
+.footer__social-icon {
+    font-size: 2.5rem;
+    color: var(--dark-grayish-violet);
+}
+
+.footer__social-icon:active {
+    color: var(--dark-violet);
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 0.1rem solid var(--dark-grayish-violet);
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.footer__menu-heading {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer__menu-link {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--very-dark-violet);
+    text-transform: uppercase;
+}
+
+.footer__menu-link::after {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    display: block;
+    width: 0;
+    border-bottom: 0.1rem solid var(--very-dark-violet);
+    transition: width 300ms ease;
+}
+
+.footer__menu-link:active::after {
+    width: 100%;
+}
+
+/* footer end ===== */
 
 
 /* ==================== MEDIUM SCREEN ==================== */
@@ -452,7 +538,7 @@ body {
         flex-basis: calc(50% - 2.5rem);
     }
 
-    .how-we-work-footer__cta{
+    .how-we-work-footer__cta {
         transition: all var(--transition);
         transition-property: background-color, color;
     }
@@ -465,6 +551,50 @@ body {
 
     /* How-we-work end ===== */
 
+    /* footer start ===== */
+    .footer__top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer__social-icon {
+        transition: color var(--transition);
+    }
+
+    .footer__social-icon:focus,
+    .footer__social-icon:hover {
+        color: var(--dark-violet);
+    }
+
+    .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer__menu {
+        flex-basis: 50%;
+    }
+
+    .footer__menu-link:focus::after,
+    .footer__menu-link:hover::after {
+        width: 100%;
+    }
+
+    .footer__pattern-desktop {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -10;
+    }
+
+    .footer__pattern-mobile {
+        display: none;
+    }
+
+    /* footer end ===== */
 }
 
 /* ==================== LARGE SCREEN ==================== */
@@ -548,11 +678,23 @@ body {
         right: 0;
     }
 
-    .how-we-work-footer__cta{
+    .how-we-work-footer__cta {
         width: 38%;
         text-align: center;
         z-index: 10;
     }
 
     /* How-we-work end ===== */
+
+    /* footer start ===== */
+    .footer__bottom {
+        flex-wrap: nowrap;
+    }
+
+    .footer__menu {
+        flex-basis: 25%;
+        align-items: start;
+    }
+
+    /* footer end ===== */
 }
