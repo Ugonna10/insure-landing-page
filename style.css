@@ -104,7 +104,7 @@ body {
     top: var(--page-header-height, 7.8rem);
     left: 100%;
     width: 100vw;
-    height: calc(100vh - 7.8rem);
+    height: calc(100vh - var(--page-header-height));
     background-color: var(--very-dark-violet);
     transition: left var(--transition);
 }
@@ -469,8 +469,8 @@ body {
     .hero .container {
         top: 6rem;
         display: flex;
-        justify-content: space-between;
         column-gap: 2rem;
+        flex-grow: 1;
         padding-inline: 2.4rem;
     }
 
@@ -511,7 +511,6 @@ body {
 
     .hero-lg-screen-img {
         display: block;
-        width: min(43rem, 50%);
         height: auto;
     }
 
@@ -631,11 +630,6 @@ body {
     .hero-texts__heading {
         padding-top: 6.5rem;
     }
-
-    .hero-lg-screen-img {
-        width: min(54rem, 45%);
-    }
-
     /* Hero end ===== */
 
     /* How-we-work start ===== */
